@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dashboard Products</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Products Dashboard</h1>
+
+      <div class="controls">
+        <input id="search" placeholder="Tìm theo title..." />
+        <label
+          >Hiển thị
+          <select id="pageSize">
+            <option value="5">5</option>
+            <option value="10" selected>10</option>
+            <option value="20">20</option>
+          </select>
+          mục</label
+        >
+      </div>
+
+      <table id="productsTable">
+        <thead>
+          <tr>
+            <th>Hình</th>
+            <th id="th-title">
+              Tên
+              <button class="sort" data-key="title" data-dir="1">▲</button>
+              <button class="sort" data-key="title" data-dir="-1">▼</button>
+            </th>
+            <th class="desc-header">Mô tả</th>
+            <th id="th-price">
+              Giá
+              <button class="sort" data-key="price" data-dir="1">▲</button>
+              <button class="sort" data-key="price" data-dir="-1">▼</button>
+            </th>
+          </tr>
+        </thead>
+        <tbody id="productsBody"></tbody>
+      </table>
+
+      <div class="pagination" id="pagination"></div>
+    </div>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>
